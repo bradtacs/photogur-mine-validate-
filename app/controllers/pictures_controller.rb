@@ -32,8 +32,4 @@ class PicturesController < ApplicationController
   def active_customer
       errors.add(:customer_id, "is not active") unless customer.active?
     end
-  private
-  def picture_params
-    params.require(:picture).permit(:artist, :title, :url)
-  end
 end
